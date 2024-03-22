@@ -2,7 +2,7 @@
 
 Este é um sistema de gerenciamento de estudantes construído usando Django 4, HTML 5, CSS 3 e Bootstrap 5 com um tema Bootswatch.
 
-![plot](https://github.com/BobsProgrammingAcademy/Student-Management-System/blob/master/students/static/images/homepage.png?raw=true)
+![plot](https://github.com/emanuelli-prado/Projeto-Final-Cyber-Edux/blob/983cf7e16a17c02d6c54ee1054e0b192427442b4/Imagem%20Projeto.png)
 
 
 
