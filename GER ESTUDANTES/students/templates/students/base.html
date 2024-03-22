@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sistema de Gerenciamento de Estudantes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <h1 style="color: white;">Sistema de Gerenciamento de Estudantes</h1>
+      <nav>
+          {% if request.user.is_authenticated %}
+          <p style="color: white;">Olá, {{ request.user.username }}</p>
+          <a class="roboto" href="{% url 'logout' %}">Logout</a>
+          {% else %}
+          <div class="flex">
+          <a class="roboto" href="{% url 'login' %}">Login</a>
+          <a class="roboto" href="{% url 'signup' %}">Signup</a>
+          </div>
+         {% endif %}
+      </nav>
+  </header>
+  <section>
+      {% block conteudo %}
+      {% endblock %}
+  </section>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <i class="fa-solid fa-graduation-cap fa-lg"></i> Sistema de Gerenciamento de Estudantes
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">
+                <i class="fa-solid fa-list fa-lg"></i> Relação de Estudantes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'add' %}">
+                {% if request.user.is_staff %}
+                <i class="fa-solid fa-plus fa-lg"></i> Adicionar Estudante
+                {% csrf_token %}
+                {% endif %}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      {% block body %}
+      {% endblock %}
+    </div>
+    <footer class="mt-auto mb-4">
+      <div class="text-center">
+        <span>
+          Copyright &copy; <script>document.write(new Date().getFullYear())</script> Universidade para Todos.
+        </span>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
