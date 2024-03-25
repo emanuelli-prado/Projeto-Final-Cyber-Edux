@@ -6,6 +6,6 @@ Trata-se de uma aplicação desenvolvida para gerenciar os estudantes de uma uni
 
 Por se tratar de informações restritas, o acesso para efetuar as alterações supracitadas é concedido apenas aos admins.
 
-<b>Sobre o autor:</b>
+<b><h1>Sobre o autor:</b></h1>
 
 Emanuelli é formada em Administração de Empresas e trabalha há mais de 15 anos na área administrativa, mas recentemente optou por fazer a transição de carreira e estuda a linguagem de programação Python. 
