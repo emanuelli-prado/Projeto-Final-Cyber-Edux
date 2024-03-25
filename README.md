@@ -1,6 +1,6 @@
 Este projeto foi desenvolvido como atividade final do curso de capacitação em Python da Cyber Edux, realizado de setembro de 2023 à março de 2024. 
 
-<b>Sistema de Gerenciamento de Estudantes:</b>
+<h1><b>Sistema de Gerenciamento de Estudantes:</b></h1>h1>
 
 Trata-se de uma aplicação desenvolvida para gerenciar os estudantes de uma universidade fictícia. No referido sistema é possível cadastrar, editar e deletar os estudantes cadastrados. 
 
