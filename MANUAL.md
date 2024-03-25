@@ -2,7 +2,6 @@
 
 Faça o login utilizando o seu nome de usuário e senha. Caso não esteja cadastrado, clique em "signup"
 
-
 ### Pré-requisitos
 
 É necessário ser admin para acessar ao sistema. 
